@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>
+  <title>Tax calculator</title>
+<style>
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.margin-left
+{
+	margin-left:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+   <h1 style="text-align:center">Tax Calculator</h1>
+<div class="container">
+ 
+ <div class="table-responsive">
+ <table class="table">
+   
+   <thead>
+      <tr>
+        <th>Salary Range From</th>
+        <th>Salary Range to</th>
+        <th>Applicable Tax %</th>
+		  <th></th>
+      </tr>
+    </thead>
+	
+    <tbody id="tbody">
+        <tr>
+	<td> 
+		<input type="text" class="form-control" id="0-cell-0" name="rangefrom">
+		</td>
+        <td> 
+		<input type="text" class="form-control" id="0-cell-1" name="rangeto">
+		</td>
+        <td> 
+		<input type="text" class="form-control" id="0-cell-2" name="tax">
+		</td>
+	<td>
+		<button  id="remButton" class="btn btn-danger">Delete</button>
+		</td>
+        </tr>
+    </tbody>
+    </table>
+  </div>
+<hr>    
+    <div class="btn-group"> 
+	<button onclick="addSlab(1)" id="addSlabButton" class="btn btn-primary">Add Slab Range</button>
+    </div>
+ <div class="btn-group"> 
+	<button  onclick="addSlab(3)" id="defaultButton" class="btn btn-success">Click here for demo slab</button>
+    </div> 
+      <hr>
+	<div class="form-inline">
+		<label> Please Enter Salary:</label>
+		<div class="form-group margin-left" >
+			<input type="text" class="form-control" id="income" placeholder="Enter Salary for user"  name="income">
+		</div>
+     
+	<div class="btn-group"> 
+		<button onclick="calculateTax()"  id="addSlabButton" class="btn btn-primary margin-left">Calculate User Tax</button>
+	</div>
+	</div>
+    <hr>
+	<p> Tax : <span id="result"> </span>  </p>
+    <hr>
+</div>
+   
+   <script src="taxcalscripts.js"></script>
+</body>
+
+
+</html>
+
+
+
+
+
